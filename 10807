@@ -5,18 +5,18 @@ import java.util.Scanner;
 class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int answer = 0;
-		int[] arr = new int[a];
+		int a = sc.nextInt(); //입력 값을 받음
+		int answer = 0;		  //답의 변수 초기화
+		int[] arr = new int[a]; //배열 생성 a의 크기로 받음
 	
-		for(int i=0; i<a;i++) {
+		for(int i=0; i<a;i++) {	//배열 값 입력
 			arr[i] = sc.nextInt();
 		}
 		
 		int V = sc.nextInt();
 
 		
-		for(int j =0; j<arr.length;j++) {
+		for(int j =0; j<arr.length;j++) { //중복 값 계산
 			if(arr[j] == V) {
 				answer++;
 			}
