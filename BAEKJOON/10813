@@ -1,0 +1,27 @@
+package JavaStudy;
+
+import java.util.Scanner;
+
+class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int[] arr = new int[N];
+		int M = sc.nextInt();
+		
+		for(int a=0;a<N;a++) { // 배열에 값 생성
+			arr[a] = a+1;
+		}
+
+		for(int q=0; q<M;q++) {
+			int i = sc.nextInt();
+			int j = sc.nextInt();
+				int temp = arr[i-1]; // 임의 변수 temp에 i 값 저장
+				arr[i-1] = arr[j-1]; // i번째 주소에 j번 째 값을 저장
+				arr[j-1] = temp; // temp에 저장 되어 있는 i값을 j번 째 주소에 저장
+		}
+		for(int q=0;q<N;q++) { //반복문으로 배열 출력
+			System.out.print(arr[q] + " ");
+		}
+	}
+}
