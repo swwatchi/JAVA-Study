@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        double[] arr = new double[a]; 
+        double b = 0;
+        double max = 0;
+        double answer = 0;
+        
+        for(int i=0;i<a;i++) { //모든 값을 1개씩 누적해서 더함
+        	arr[i] = sc.nextInt();
+        	b += arr[i];
+        }
+        for(int i=0;i<a;i++) { //최대값을 찾음
+            if(max < arr[i]) {
+            	max = arr[i];
+            }
+        }
+        answer = b/max*100.0/a;
+        System.out.println(answer);
+    }
+}
