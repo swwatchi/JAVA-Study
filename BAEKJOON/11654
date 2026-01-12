@@ -1,0 +1,12 @@
+package JavaStudy; //ASCII로 변경하려면 String으로 받아서 int로 변경 후 char로 변경
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String ascii = sc.next();
+        int a = (int)ascii.charAt(0); //바꾸려는 형식을 ()안에 넣으면 강제 변환
+        System.out.println(a);
+        }
+}
