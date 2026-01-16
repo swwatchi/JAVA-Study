@@ -1,0 +1,23 @@
+package JavaStudy;
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);   	
+        int n = sc.nextInt();
+
+        for(int i=1;i<=n;i++) {
+            int R = sc.nextInt();
+            String word = sc.next();
+            String answer = "";
+            
+            for(int j=0;j<word.length();j++) {
+            	for(int q=1;q<=R;q++) {
+            		answer += word.charAt(j);
+            	}
+            }
+            System.out.println(answer);
+        }
+    }
+}
