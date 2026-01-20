@@ -1,0 +1,27 @@
+package JavaStudy;
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	int a = sc.nextInt();
+    	int b = sc.nextInt();
+    	
+    	String stra = Integer.toString(a); // String으로 변환
+    	String sba = new StringBuilder(stra).reverse().toString(); // 가변의 객체인 StringBuilder를 이용하여 reverse()를 사용
+    	int result1 = Integer.parseInt(sba); // 뒤집은 문자열을 int형으로 다시 변경
+    	
+    	String strb = Integer.toString(b);
+    	String sbb = new StringBuilder(strb).reverse().toString();
+    	int result2 = Integer.parseInt(sbb);
+    	
+    	if(result1>result2) {
+    		System.out.print(result1);
+    	}
+    	else if(result1<result2) {
+    		System.out.println(result2);
+    	}
+    	
+    }
+}
