@@ -1,0 +1,43 @@
+package JavaStudy;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+    	BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    	String str = bf.readLine();
+    	int count = 0;
+    	
+    	for(int i=0;i<str.length();i++) {
+    		char word = str.charAt(i);
+    		
+    		if(word == 'A' || word == 'B' ||word == 'C') {
+    			count += 3;
+    		}
+    		if(word == 'D' || word == 'E' ||word == 'F') {
+    			count += 4;
+    		}
+    		if(word == 'G' || word == 'H' ||word == 'I') {
+    			count += 5;
+    		}
+    		if(word == 'J' || word == 'K' ||word == 'L') {
+    			count += 6;
+    		}
+    		if(word=='M' ||word=='N'|| word=='O') {
+                count +=7;
+        }
+        if(word=='P' ||word=='Q'|| word=='R' || word=='S') {
+          count +=8;
+        }
+        if(word=='T' ||word=='U'|| word=='V') {
+          count +=9;
+        }
+        if(word=='W' ||word=='X'|| word=='Y'|| word=='Z') {
+          count +=10;
+        }
+      }
+      System.out.println(count);
+    }
+}
