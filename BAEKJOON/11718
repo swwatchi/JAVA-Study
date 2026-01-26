@@ -1,0 +1,17 @@
+package JavaStudy;
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	StringBuilder sb = new StringBuilder();
+
+        while (sc.hasNextLine()) { // 다음 줄에 입력 값이 없으면 False
+            String str = sc.nextLine(); // 한줄을 str 변수에 저장
+            sb.append(str).append("\n"); // 읽어온 str에 \n을 붙여서 StringBuilder에 저
+        }
+        System.out.print(sb.toString()); //toString으로 붙여서 출
+        sc.close(); // 사용 끝난 Scanner을 닫음
+    }
+} // Ctrl + z 를 누르면 결과값이 나옴
